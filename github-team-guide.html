@@ -240,6 +240,62 @@
   </div>
 
   <!-- ───────────────────────────────────────────────
+       SECTION 0 – EVERYONE: Git setup
+  ─────────────────────────────────────────────────── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="step-badge" style="background:#533AB7;">0</div>
+      <h2>One-time Git setup — do this first</h2>
+      <span class="role-tag" style="background:#533AB722; color:#a78bfa; border:1px solid #533AB755; margin-left:auto; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.05em; padding:3px 10px; border-radius:12px;">Everyone</span>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <p style="font-size:14px; color:#8b949e; margin-bottom:16px;">Every team member must do this once on their machine before anything else. This tells Git who you are so your commits are correctly attributed.</p>
+
+        <div class="steps">
+          <div class="step-row">
+            <div class="step-num">1</div>
+            <div class="step-text">Open <strong>Command Prompt</strong> (search <em>cmd</em> in the Start menu) and verify Git is installed:</div>
+          </div>
+        </div>
+
+        <div class="code-block" style="margin-top:10px;">
+          <span class="cmd">git --version</span><br/>
+          <span class="comment"># Should print something like: git version 2.44.0.windows.1</span>
+        </div>
+
+        <div class="steps" style="margin-top:16px;">
+          <div class="step-row">
+            <div class="step-num">2</div>
+            <div class="step-text">Set your <strong>name</strong> and <strong>email</strong> globally. Use the same email as your GitHub account:</div>
+          </div>
+        </div>
+
+        <div class="code-block" style="margin-top:10px;">
+          <span class="cmd">git config --global user.name <span class="path">"Your Name"</span></span><br/>
+          <span class="cmd">git config --global user.email <span class="path">"your-email@example.com"</span></span>
+        </div>
+
+        <div class="steps" style="margin-top:16px;">
+          <div class="step-row">
+            <div class="step-num">3</div>
+            <div class="step-text">Verify your config was saved correctly:</div>
+          </div>
+        </div>
+
+        <div class="code-block" style="margin-top:10px;">
+          <span class="cmd">git config --global --list</span><br/>
+          <span class="comment"># Should show user.name and user.email</span>
+        </div>
+
+        <div class="note" style="margin-top:14px;"><strong>Note:</strong> The <code>--global</code> flag applies this config to all repos on your machine. You only need to do this once. If you ever need different settings for a specific repo, run the same commands without <code>--global</code> inside that repo folder.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">Setup done — now let's create the repo</div>
+
+  <!-- ───────────────────────────────────────────────
        SECTION 1 – REPO OWNER: Create & share repo
   ─────────────────────────────────────────────────── -->
   <div class="section">
@@ -271,7 +327,11 @@
         </div>
 
         <!-- Screenshot placeholder: GitHub repo page showing Code button & HTTPS URL -->
-        
+        <div class="img-slot">
+          <div class="img-icon">🖼️</div>
+          <div>Screenshot: GitHub repo → Code button → copy HTTPS URL</div>
+          <div class="img-name">step1-github-clone-url.png</div>
+        </div>
       </div>
     </div>
   </div>
@@ -317,10 +377,18 @@
         </div>
 
         <!-- Screenshot placeholder: Siid Source Control panel -->
-       
+        <div class="img-slot">
+          <div class="img-icon">🖼️</div>
+          <div>Screenshot: Siid IDE → Source Control → Initialize Repository</div>
+          <div class="img-name">step2-siid-source-control.png</div>
+        </div>
 
         <!-- Screenshot placeholder: Add Remote dialog -->
-        
+        <div class="img-slot">
+          <div class="img-icon">🖼️</div>
+          <div>Screenshot: Siid IDE → Add Remote dialog (paste GitHub URL)</div>
+          <div class="img-name">step2-siid-add-remote.png</div>
+        </div>
 
         <div class="note"><strong>Tip:</strong> Make sure you are on the <code>main</code> branch before pushing. Check the branch name in the bottom-left status bar of Siid.</div>
       </div>
@@ -356,7 +424,11 @@
         </div>
 
         <!-- Screenshot placeholder: File Explorer address bar showing cmd -->
-        
+        <div class="img-slot">
+          <div class="img-icon">🖼️</div>
+          <div>Screenshot: File Explorer address bar → type "cmd" → press Enter</div>
+          <div class="img-name">step3-explorer-open-cmd.png</div>
+        </div>
 
         <div class="steps" style="margin-top:14px;">
           <div class="step-row">
@@ -374,7 +446,11 @@
         </div>
 
         <!-- Screenshot placeholder: CMD window running git clone -->
-        
+        <div class="img-slot">
+          <div class="img-icon">🖼️</div>
+          <div>Screenshot: Command Prompt running git clone command</div>
+          <div class="img-name">step3-cmd-git-clone.png</div>
+        </div>
 
         <div class="steps" style="margin-top:14px;">
           <div class="step-row">
@@ -384,7 +460,11 @@
         </div>
 
         <!-- Screenshot placeholder: Siid IDE open folder -->
-        
+        <div class="img-slot">
+          <div class="img-icon">🖼️</div>
+          <div>Screenshot: Siid IDE → File → Open Folder (select cloned project)</div>
+          <div class="img-name">step3-siid-open-folder.png</div>
+        </div>
       </div>
     </div>
   </div>
@@ -469,7 +549,11 @@
         </div>
 
         <!-- Screenshot placeholder: Siid Source Control panel with staged changes -->
-        
+        <div class="img-slot">
+          <div class="img-icon">🖼️</div>
+          <div>Screenshot: Siid IDE Source Control panel — stage, commit & push UI</div>
+          <div class="img-name">step4-siid-commit-push-ui.png</div>
+        </div>
 
         <div class="note"><strong>Tip:</strong> The sync button in the bottom status bar (↑↓) lets you pull and push in one click once your branch is already published.</div>
       </div>
@@ -512,7 +596,11 @@
           </div>
         </div>
 
-        
+        <div class="img-slot">
+          <div class="img-icon">🖼️</div>
+          <div>Screenshot: GitHub → Compare & pull request → fill title, description, reviewer</div>
+          <div class="img-name">step5-github-create-pr.png</div>
+        </div>
 
         <div class="note"><strong>Tip:</strong> Before raising a PR, make sure your branch is up to date with <code>main</code>. Pull → stash if needed (see Step 4) to avoid merge conflicts.</div>
       </div>
@@ -555,7 +643,11 @@
           </div>
         </div>
 
-        
+        <div class="img-slot">
+          <div class="img-icon">🖼️</div>
+          <div>Screenshot: GitHub PR → Files changed → Approve → Merge pull request</div>
+          <div class="img-name">step6-github-merge-pr.png</div>
+        </div>
 
         <div class="note"><strong>After merging:</strong> All team members should pull <code>main</code> in Siid to get the merged changes before starting their next feature branch.</div>
       </div>
